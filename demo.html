@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="src/jquery.shortentext.js"></script>
+</head>
+<body>
+
+<span class="right">This is a very long sentence</span><br />
+<span class="left">This is a very long sentence</span><br />
+<span class="file">my-very-long-filename-with-extension.js</span><br />
+<span class="file">my-very-long-filename-without-extension</span><br />
+
+<script>
+    $('span.right').shortenText({
+        width: 100,
+        strategy: 'rightTrim'
+    });
+    $('span.left').shortenText({
+        width: 100,
+        strategy: 'leftTrim'
+    });
+    $('span.file').shortenText({
+        width: 100,
+        strategy: 'file'
+    });
+</script>
+
+</body>
+</html>
